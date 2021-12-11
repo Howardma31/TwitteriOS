@@ -58,13 +58,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vmb-Jc-HCm">
-                                <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="122" id="Vmb-Jc-HCm" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vmb-Jc-HCm" id="FGI-cQ-CcL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N7t-50-prL">
+                                            <rect key="frame" x="16" y="11" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="Zkg-Ge-RsX"/>
+                                                <constraint firstAttribute="height" constant="65" id="dSz-vw-Mao"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-UF-tdR">
+                                            <rect key="frame" x="89" y="11" width="69" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="zHQ-jL-Fde"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVe-hJ-m4R">
+                                            <rect key="frame" x="89" y="37" width="270" height="74"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="leading" secondItem="N7t-50-prL" secondAttribute="trailing" constant="8" id="7sz-i2-Sfn"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="trailing" secondItem="FGI-cQ-CcL" secondAttribute="trailingMargin" id="BUB-Gq-Hat"/>
+                                        <constraint firstItem="Jmk-UF-tdR" firstAttribute="top" secondItem="FGI-cQ-CcL" secondAttribute="topMargin" id="ENt-Y4-Jbh"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="top" secondItem="Jmk-UF-tdR" secondAttribute="bottom" constant="4" id="KZC-mL-lGc"/>
+                                        <constraint firstItem="N7t-50-prL" firstAttribute="leading" secondItem="FGI-cQ-CcL" secondAttribute="leadingMargin" id="KtV-cH-Oxa"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="trailing" secondItem="FGI-cQ-CcL" secondAttribute="trailingMargin" id="OUM-8r-Rr4"/>
+                                        <constraint firstItem="N7t-50-prL" firstAttribute="top" secondItem="FGI-cQ-CcL" secondAttribute="topMargin" id="Opm-4P-gry"/>
+                                        <constraint firstItem="Jmk-UF-tdR" firstAttribute="top" secondItem="FGI-cQ-CcL" secondAttribute="topMargin" id="Tsx-O0-Fnq"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="leading" secondItem="N7t-50-prL" secondAttribute="trailing" constant="8" id="ki4-ix-kd0"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="leading" secondItem="N7t-50-prL" secondAttribute="trailing" constant="8" id="ouv-2W-Z7T"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="bottom" secondItem="FGI-cQ-CcL" secondAttribute="bottomMargin" id="ozu-IQ-sIT"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="bottom" secondItem="FGI-cQ-CcL" secondAttribute="bottomMargin" id="qdE-8y-Sos"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="top" secondItem="Jmk-UF-tdR" secondAttribute="bottom" constant="4" id="rtK-BX-EhJ"/>
+                                        <constraint firstItem="Jmk-UF-tdR" firstAttribute="leading" secondItem="N7t-50-prL" secondAttribute="trailing" constant="8" id="sCb-xU-CAh"/>
+                                        <constraint firstItem="lVe-hJ-m4R" firstAttribute="top" secondItem="Jmk-UF-tdR" secondAttribute="bottom" constant="4" id="yaN-uO-Fa6"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="N7t-50-prL" id="uuX-EA-de7"/>
+                                    <outlet property="tweetContent" destination="lVe-hJ-m4R" id="1ve-SM-Da3"/>
+                                    <outlet property="userNameLabel" destination="Jmk-UF-tdR" id="8m8-8l-gDp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -83,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h78-Jd-BvG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-18"/>
+            <point key="canvasLocation" x="1533.5999999999999" y="-18.440779610194905"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9bT-Ke-Hag">
