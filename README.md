@@ -23,7 +23,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='gifs/XgnWKnHs.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 Bartintcolor is changed in iOS 15 https://developer.apple.com/forums/thread/682420
